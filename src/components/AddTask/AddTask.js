@@ -9,7 +9,7 @@ const AddTask = () => {
         const taskDescription = e.target.taskDescription.value;
         const task = { title, taskDescription }
 
-        fetch('http://localhost:5000/addtask', {
+        fetch('https://true-doright-60997.herokuapp.com/addtask', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

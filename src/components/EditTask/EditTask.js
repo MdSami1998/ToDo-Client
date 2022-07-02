@@ -10,13 +10,13 @@ const EditTask = () => {
     const [task, setTask] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singletask/${id}`)
+        fetch(`https://true-doright-60997.herokuapp.com/singletask/${id}`)
             .then(res => res.json())
             .then(data => setTask(data));
     })
 
     // const { isLoading, data: task } = useQuery('task', () =>
-    //     fetch(`http://localhost:5000/singletask/${id}`).then(res =>
+    //     fetch(`https://true-doright-60997.herokuapp.com/singletask/${id}`).then(res =>
     //         res.json()
     //     )
     // )
@@ -30,7 +30,7 @@ const EditTask = () => {
         const taskDescription = e.target.taskDescription.value;
         const task = { title, taskDescription }
 
-        fetch(`http://localhost:5000/singletask/${id}`, {
+        fetch(`https://true-doright-60997.herokuapp.com/singletask/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -47,7 +47,7 @@ const EditTask = () => {
             })
         e.target.reset();
     }
-    
+
     return (
         <div className=' mt-12'>
             <h1 className='mb-5 text-2xl font-bold'>New Task</h1>

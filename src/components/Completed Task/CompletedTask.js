@@ -4,17 +4,17 @@ const CompletedTask = () => {
     const [completedTasks, setCompletedTasks] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tasks')
+        fetch('https://true-doright-60997.herokuapp.com/completedtask')
             .then(res => res.json())
             .then(data => setCompletedTasks(data))
     }, [completedTasks])
     return (
         <div>
-            <h1>Completed Task</h1>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-20 px-20'>
+            <h1 className='text-3xl font-bold text-center my-10'>Completed Task</h1>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-20 px-3 md:px-20'>
                 {
                     completedTasks?.map(task =>
-                        <div className="card w-full m-5 bg-primary text-primary-content">
+                        <div key={task._id} className="card w-full bg-primary text-primary-content">
                             <div className="card-body wrap">
                                 <h2 className="card-title">{task.title}</h2>
                                 <div className='text-justify'>{task.taskDescription}</div>

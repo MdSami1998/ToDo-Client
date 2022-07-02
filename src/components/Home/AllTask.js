@@ -8,7 +8,7 @@ const AllTask = ({ task }) => {
 
     const handleTaskCheckBtn = (id) => {
         const completedTask = { title, taskDescription };
-        fetch('http://localhost:5000/completedtask', {
+        fetch('https://true-doright-60997.herokuapp.com/completedtask', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -22,7 +22,7 @@ const AllTask = ({ task }) => {
                 }
             })
 
-        fetch(`http://localhost:5000/task/${id}`, {
+        fetch(`https://true-doright-60997.herokuapp.com/task/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -35,7 +35,7 @@ const AllTask = ({ task }) => {
         navigate(`/edittask/${id}`)
     }
     return (
-        <div className="card w-full m-5 bg-primary text-primary-content">
+        <div className="card w-full bg-primary text-primary-content">
             <div className="card-body wrap">
                 <h2 className="card-title">
                     <input onClick={() => handleTaskCheckBtn(_id)} type="checkbox" className="checkbox" />
