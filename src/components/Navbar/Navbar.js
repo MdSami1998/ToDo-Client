@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const menuItem = <>
         <li><Link to="/home" className='font-semibold hover:border-b-2 border-primary text-lg'>Home</Link></li>
-        <li><Link to="/task" className='font-semibold hover:border-b-2 border-primary text-lg'>Task</Link></li>
+        <li><Link to="/task" className='font-semibold hover:border-b-2 border-primary text-lg'>To-Do</Link></li>
         <li><Link to="/completedtask" className='font-semibold hover:border-b-2 border-primary text-lg'>Completed Task</Link></li>
         <li><Link to="/calender" className='font-semibold hover:border-b-2 border-primary text-lg'>Calender</Link></li>
     </>

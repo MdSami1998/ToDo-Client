@@ -13,8 +13,9 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className='min-h-screen'>
             <h1 className='text-3xl font-bold text-center my-10'>Tasks List</h1>
+            {tasks.length===0 && <h1 className='text-4xl text-accent font-bold text-center mt-20'>No Task to complete.</h1>}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20 px-3 md:px-20'>
                 {
                     tasks?.map(task => <AllTask key={task._id} task={task}></AllTask>)

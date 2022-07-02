@@ -14,10 +14,10 @@ const CompletedTask = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20 px-3 md:px-20'>
                 {
                     completedTasks?.map(task =>
-                        <div key={task._id} className="card w-full bg-primary text-primary-content">
+                        <div key={task._id} className="card w-full bg-accent text-primary-content">
                             <div className="card-body wrap">
                                 <h2 className="card-title">{task.title}</h2>
-                                <div className='text-justify'>{task.taskDescription}</div>
+                                <p className='text-justify text-lg'>{task.taskDescription}</p>
                             </div>
                         </div>)
                 }

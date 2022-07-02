@@ -35,13 +35,13 @@ const AllTask = ({ task }) => {
         navigate(`/edittask/${id}`)
     }
     return (
-        <div className="card w-full bg-primary text-primary-content">
+        <div className="card w-full bg-accent text-primary-content">
             <div className="card-body wrap">
                 <h2 className="card-title">
-                    <input onClick={() => handleTaskCheckBtn(_id)} type="checkbox" className="checkbox" />
+                    <input onClick={() => handleTaskCheckBtn(_id)} type="checkbox" className="checkbox border border-black" />
                     {title}
                 </h2>
-                <div className='text-justify'>{taskDescription}</div>
+                <p className='text-justify text-lg'>{taskDescription}</p>
                 <div className="card-actions">
                     <button onClick={() => handleEditTask(task._id)} className="btn btn-sm w-20">edit</button>
                 </div>
